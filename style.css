@@ -1,0 +1,268 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #05beac;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Sections */
+section {
+    padding: 50px 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Resume Section */
+#home {
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Centering Skills & Achievements */
+#skills, #achievements {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: rgb(108, 206, 203);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2, #achievements h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#skills ul, #achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li, #achievements ul li {
+    font-size: 1.1rem;
+    color: black;
+    padding: 8px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #skills, #achievements {
+        max-width: 90%;
+    }
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Feature Section (iPhone Store) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: rgb(108, 206, 203);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Cart Styling */
+aside {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Contact Section */
+#contact {
+    background: rgb(108, 206, 203);;
+    color: white;
+    padding: 50px 10%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #666;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+/* Animation for Floating Labels */
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.9rem;
+    color: #828d9a;
+}
+
+/* Styling the Submit Button */
+.btn-submit {
+    background: #ffdd57;
+    color: #222;
+    font-size: 1.2rem;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: #ffc107;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 5%;
+    }
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: #05beac;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 30px 5%;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

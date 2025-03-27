@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDTERM EXAMINATION</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header section -->
+<header>
+    <!-- Main heading of the page -->
+    <h1>Resume & Features</h1>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li> <!-- Link to Home section -->
+            <li><a href="#feature">Feature</a></li> <!-- Link to Feature section -->
+            <li><a href="#contact">Contact</a></li> <!-- Link to Contact section -->
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Section (Resume) -->
+<section id="home">
+    <h2>My Resume</h2>
+    <p>Hello, I'm <strong> Jenny B. Gazmen </strong>, a passionate <strong>Web Developer</strong> skilled in HTML, CSS, JavaScript.</p>
+
+    <!-- Skills section -->
+    <div id="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Web Development & UI/UX</li>
+            <li>Frontend Developer</li>
+        </ul>
+    </div>
+
+    <!-- Achievements section -->
+    <div id="achievements">
+        <h3>Achievements & Trainings</h3>
+        <ul>
+            <li>Completed Web Development </li>
+            <li>Certified in Frontend Development</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Feature Section (iPhone Store) -->
+<section id="feature">
+    <h2>Latest iPhones</h2>
+    <p>Explore our latest iPhone models and add them to your cart.</p>
+
+    <!-- Product grid containing iPhone listings -->
+    <div class="product-grid">
+        <div class="product">
+            <img src="assets/iphone15pro.webp" alt="iPhone 15 Pro">
+            <h3>iPhone 15 pro</h3>
+            <p>Price: $699</p>
+            <button onclick="addToCart('iPhone 15 Pro', 699)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="assets/iphone15promax.webp" alt="iPhone 15 Pro Max">
+            <h3>iPhone 15 Pro Max</h3>
+            <p>Price: $799</p>
+            <button onclick="addToCart('iPhone 15 Pro Max', 799)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="assets/iphone16pro.jpg" alt="iPhone 16 Pro">
+            <h3>iPhone 16 Pro</h3>
+            <p>Price: $899</p>
+            <button onclick="addToCart('iPhone 16 Pro', 899)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="assets/iphone16promax.webp" alt="iPhone 16 Pro Max">
+            <h3>iPhone 16 Pro Max</h3>
+            <p>Price: $999</p>
+            <button onclick="addToCart('iPhone 16 Pro Max', 999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Shopping cart section -->
+    <aside>
+        <h3>Shopping Cart</h3>
+        <ul id="cart-list"></ul>
+        <p>Total: $<span id="total-price">0</span></p>
+    </aside>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h3>Contact Me</h3>
+    <!-- Contact form -->
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<!-- Personal Info -->
+<aside>
+    <img src="assets/profile.jpg" alt="My Portrait">
+    <p><strong>Name:</strong> JENNY B. GAZMEN</p>
+    <p><strong>Email:</strong> jennygazmen03@gmail.com</p>
+    <p><strong>Location:</strong> Sta Cruz, Ilocos Sur</p>
+</aside>
+
+<!-- Footer section -->
+<footer>
+    <p>© 2025 Jenny B. Gazmen. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript (Cart System) -->
+<script>
+    let cart = []; // Initialize empty cart array
+    let total = 0; // Initialize total price variable
+
+    // Function to add items to cart
+    function addToCart(name, price) {
+        cart.push({ name, price }); // Add item to cart array
+        total += price; // Update total price
+        updateCart(); // Refresh cart display
+    }
+
+    // Function to update cart display
+    function updateCart() {
+        let cartList = document.getElementById("cart-list"); // Get cart list element
+        let totalPrice = document.getElementById("total-price"); // Get total price element
+
+        cartList.innerHTML = ""; // Clear existing cart items
+        cart.forEach(item => {
+            let li = document.createElement("li"); // Create new list item
+            li.textContent = `${item.name} - $${item.price}`; // Set item text
+            cartList.appendChild(li); // Append to cart list
+        });
+
+        totalPrice.textContent = total; // Update total price display
+    }
+</script>
+
+</body>
+</html>
